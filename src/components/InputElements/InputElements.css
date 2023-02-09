@@ -1,0 +1,23 @@
+.inputs {
+  padding: 20px 0;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
+
+.inputs div {
+  color: #565455;
+  position: relative;
+}
+
+.inputs div h3 {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+}
+
+.inputs div img {
+  height: 99px;
+  width: 79px;
+}

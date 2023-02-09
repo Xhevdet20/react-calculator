@@ -1,0 +1,21 @@
+.screen {
+  height: 123px;
+  background: rgba(206, 226, 230, 0.54);
+  border-radius: 10px;
+  color: #4FE8DD;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.screen h2 {
+  font-size: 24px;
+  padding: 10px;
+}
+
+.screen h1 {
+  font-size: 36px;
+  padding: 10px;
+}
