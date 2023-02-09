@@ -3,10 +3,32 @@ import "./InputElements.css";
 import blueHex from "../../assets/blueHex.png";
 import grayHex from "../../assets/grayHex.png";
 
-export default function InputElements() {
+export default function InputElements({
+  expression,
+  setExpression,
+  setResult,
+}) {
+
+
+  const evaluate = () => {
+    try {
+      setResult(eval(expression).toString().substring(0, 14));
+    } catch (error) {
+      console.log("Wrong expression format");
+    }
+  }
+
+
+
+
   return (
     <div className="inputs">
-      <div>
+      <div
+        onClick={() => {
+          setExpression("");
+          setResult("");
+        }}
+      >
         <img src={blueHex} alt="clock" />
         <h3>C</h3>
       </div>
@@ -18,75 +40,81 @@ export default function InputElements() {
         <img src={blueHex} alt="clock" />
         <h3>%</h3>
       </div>
-      <div>
+      <div
+        onClick={() =>
+          setExpression(expression.substring(0, expression.length - 1))
+        }
+      >
         <img src={blueHex} alt="clock" />
         <h3>DEL</h3>
       </div>
 
-      <div>
+      <div onClick={() => setExpression(expression + "7")}>
         <img src={grayHex} alt="clock" />
         <h3>7</h3>
       </div>
-      <div>
+      <div onClick={() => setExpression(expression + "8")}>
         <img src={grayHex} alt="clock" />
         <h3>8</h3>
       </div>
-      <div>
+      <div onClick={() => setExpression(expression + "9")}>
         <img src={grayHex} alt="clock" />
         <h3>9</h3>
       </div>
-      <div>
+      <div onClick={() => setExpression(expression + "/")}>
         <img src={blueHex} alt="clock" />
         <h3>/</h3>
       </div>
 
-      <div>
+      <div onClick={() => setExpression(expression + "4")}>
         <img src={grayHex} alt="clock" />
         <h3>4</h3>
       </div>
-      <div>
+      <div onClick={() => setExpression(expression + "5")}>
         <img src={grayHex} alt="clock" />
         <h3>5</h3>
       </div>
-      <div>
+      <div onClick={() => setExpression(expression + "6")}>
         <img src={grayHex} alt="clock" />
         <h3>6</h3>
       </div>
-      <div>
+      <div onClick={() => setExpression(expression + "*")}>
         <img src={blueHex} alt="clock" />
         <h3>X</h3>
       </div>
 
-      <div>
+      <div onClick={() => setExpression(expression + "1")}>
         <img src={grayHex} alt="clock" />
         <h3>1</h3>
       </div>
-      <div>
+      <div onClick={() => setExpression(expression + "2")}>
         <img src={grayHex} alt="clock" />
         <h3>2</h3>
       </div>
-      <div>
+      <div onClick={() => setExpression(expression + "3")}>
         <img src={grayHex} alt="clock" />
         <h3>3</h3>
       </div>
-      <div>
+      <div onClick={() => setExpression(expression + "-")}>
         <img src={blueHex} alt="clock" />
         <h3>-</h3>
       </div>
 
-      <div>
+      <div onClick={() => setExpression(expression + "0")}>
         <img src={grayHex} alt="clock" />
         <h3>0</h3>
       </div>
-      <div>
+      <div onClick={() => setExpression(expression + ".")}>
         <img src={blueHex} alt="clock" />
         <h3>.</h3>
       </div>
-      <div>
+      <div
+        onClick={() => evaluate()}
+      >
         <img src={blueHex} alt="clock" />
         <h3>=</h3>
       </div>
-      <div>
+      <div onClick={() => setExpression(expression + "+")}>
         <img src={blueHex} alt="clock" />
         <h3>+</h3>
       </div>

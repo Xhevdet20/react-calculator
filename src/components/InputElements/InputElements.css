@@ -15,9 +15,11 @@
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 24px;
+  cursor: pointer;
 }
 
 .inputs div img {
   height: 99px;
   width: 79px;
+  cursor: pointer;
 }
