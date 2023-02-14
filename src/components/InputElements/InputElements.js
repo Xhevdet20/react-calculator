@@ -2,13 +2,14 @@ import React from "react";
 import "./InputElements.css";
 import blueHex from "../../assets/blueHex.png";
 import grayHex from "../../assets/grayHex.png";
+import grayHexLight from '../../assets/grayHexWhite.png';
 
 export default function InputElements({
   expression,
   setExpression,
   setResult,
+  theme
 }) {
-
 
   const evaluate = () => {
     try {
@@ -18,8 +19,7 @@ export default function InputElements({
     }
   }
 
-
-
+  const hexSource = theme === "dark"  ?  grayHex : grayHexLight
 
   return (
     <div className="inputs">
@@ -50,15 +50,15 @@ export default function InputElements({
       </div>
 
       <div onClick={() => setExpression(expression + "7")}>
-        <img src={grayHex} alt="clock" />
+        <img src={hexSource} alt="clock" />
         <h3>7</h3>
       </div>
       <div onClick={() => setExpression(expression + "8")}>
-        <img src={grayHex} alt="clock" />
+        <img src={hexSource} alt="clock" />
         <h3>8</h3>
       </div>
       <div onClick={() => setExpression(expression + "9")}>
-        <img src={grayHex} alt="clock" />
+        <img src={hexSource} alt="clock" />
         <h3>9</h3>
       </div>
       <div onClick={() => setExpression(expression + "/")}>
@@ -67,15 +67,15 @@ export default function InputElements({
       </div>
 
       <div onClick={() => setExpression(expression + "4")}>
-        <img src={grayHex} alt="clock" />
+        <img src={hexSource} alt="clock" />
         <h3>4</h3>
       </div>
       <div onClick={() => setExpression(expression + "5")}>
-        <img src={grayHex} alt="clock" />
+        <img src={hexSource} alt="clock" />
         <h3>5</h3>
       </div>
       <div onClick={() => setExpression(expression + "6")}>
-        <img src={grayHex} alt="clock" />
+        <img src={hexSource} alt="clock" />
         <h3>6</h3>
       </div>
       <div onClick={() => setExpression(expression + "*")}>
@@ -84,15 +84,15 @@ export default function InputElements({
       </div>
 
       <div onClick={() => setExpression(expression + "1")}>
-        <img src={grayHex} alt="clock" />
+        <img src={hexSource} alt="clock" />
         <h3>1</h3>
       </div>
       <div onClick={() => setExpression(expression + "2")}>
-        <img src={grayHex} alt="clock" />
+        <img src={hexSource} alt="clock" />
         <h3>2</h3>
       </div>
       <div onClick={() => setExpression(expression + "3")}>
-        <img src={grayHex} alt="clock" />
+        <img src={hexSource} alt="clock" />
         <h3>3</h3>
       </div>
       <div onClick={() => setExpression(expression + "-")}>
@@ -101,7 +101,7 @@ export default function InputElements({
       </div>
 
       <div onClick={() => setExpression(expression + "0")}>
-        <img src={grayHex} alt="clock" />
+        <img src={hexSource} alt="clock" />
         <h3>0</h3>
       </div>
       <div onClick={() => setExpression(expression + ".")}>

@@ -6,6 +6,16 @@
   /* box-sizing: border-box; */
 }
 
+.light-mode {
+  --background-color: white;
+  --display-text-color : #565455;
+}
+
+.dark-mode {
+  --background-color: black;
+  --display-text-color : #4FE8DD;
+}
+
 body {
   height: 100vh;
   background-color: #bde3ee;
@@ -13,11 +23,12 @@ body {
   justify-content: center;
   align-items: center;
   font-family: "Roboto";
+  color: #565455;
 }
 
 .container {
   height: 720px;
   width: 320px;
-  background-color: #080404;
+  background-color: var(--background-color);
   padding: 20px 45px;
 }

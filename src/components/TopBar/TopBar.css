@@ -2,7 +2,6 @@
 
 .bar {
   width: 100%;
-  color: #565455;
 
   display: flex;
   justify-content: space-between;
@@ -14,11 +13,13 @@
 }
 
 .icon img {
+  cursor: pointer;
   height: 36px;
   margin-bottom: -14px;
   /* padding-top: px; */
 }
 
 .toggle img {
+  cursor: pointer;
   height: 18px;
 }
