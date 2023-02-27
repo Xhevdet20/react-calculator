@@ -9,11 +9,17 @@
 .light-mode {
   --background-color: white;
   --display-text-color : #565455;
+  --drawer-background : #ffffffcc;
+  --drawer-text : #565455c0;
+  --drawer-button-hover: #ddfffc;
 }
 
 .dark-mode {
   --background-color: black;
   --display-text-color : #4FE8DD;
+  --drawer-background : rgba(0, 0, 0, 0.651);
+  --drawer-text : #4fe8deaf;
+  --drawer-button-hover: rgb(58, 57, 57);
 }
 
 body {
@@ -31,4 +37,5 @@ body {
   width: 320px;
   background-color: var(--background-color);
   padding: 20px 45px;
+  position: relative;
 }

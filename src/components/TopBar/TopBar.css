@@ -12,13 +12,6 @@
   padding:  10px 0  20px 0 ;
 }
 
-.icon img {
-  cursor: pointer;
-  height: 36px;
-  margin-bottom: -14px;
-  /* padding-top: px; */
-}
-
 .toggle img {
   cursor: pointer;
   height: 18px;

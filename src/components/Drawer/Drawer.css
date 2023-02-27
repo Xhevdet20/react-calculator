@@ -1,0 +1,76 @@
+.drawer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.drawer-toggle {
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border: 2px solid black;
+  background-color: white;
+  color: black;
+  margin-bottom: 1rem;
+}
+
+.drawer {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  z-index: 10;
+}
+
+.drawer.open {
+  display: block;
+}
+
+.icon img {
+  cursor: pointer;
+  height: 36px;
+  margin-bottom: -14px;
+}
+
+.history-list {
+  list-style-type: none;
+}
+
+.history-list li {
+  padding: 10px;
+  width: 80%;
+  height: 60%;
+  margin: auto;
+}
+
+
+.drawer.open {
+  background-color: var(--background-color);
+}
+
+.history-button {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+}
+
+.history-button button {
+  height: 40px;
+  width: 60%;
+  font-size: 25px;
+  border: none;
+  color: var(--drawer-text);
+  background-color: var(--drawer-background);
+  border: 1px solid var(--drawer-text);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.history-button button:hover {
+background-color:var( --drawer-button-hover); 
+}

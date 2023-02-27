@@ -14,8 +14,26 @@ export default function InputElements({
   const evaluate = () => {
     try {
       setResult(eval(expression).toString().substring(0, 14));
+      const newData = {
+        expression,
+        result : eval(expression).toString().substring(0, 14)
+      }
+      
+      const history = localStorage.getItem('history');
+      if(!history){
+        const newArrayString = JSON.stringify([newData]);
+        localStorage.setItem('history', newArrayString);
+      } else {
+        let myArray = JSON.parse(history);
+        myArray.push(newData);
+        const myArrayString = JSON.stringify(myArray);
+        localStorage.setItem('history', myArrayString);
+      }
+      
+      setExpression("");
     } catch (error) {
-      console.log("Wrong expression format");
+      setResult("Wrong expression");
+      setExpression("");
     }
   }
 

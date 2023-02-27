@@ -21,11 +21,12 @@ export default function Container() {
     <div
       className={`${theme === "light" ? "light-mode" : "dark-mode"} container`}
     >
-      <TopBar theme={theme} toggleTheme={toggleTheme} />
+      <TopBar theme={theme} toggleTheme={toggleTheme} result={result} />
       <OutputScreen expression={expression} result={result} theme={theme} />
       <InputElements
         setExpression={setExpression}
         expression={expression}
+        result={result}
         setResult={setResult}
         theme={theme}
       />
